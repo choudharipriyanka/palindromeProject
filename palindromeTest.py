@@ -26,8 +26,7 @@ def count_palindrome(str):
             P[i][i + 1] = True
             dp[i][i + 1] = 1
 
-    # Palindromes of length more than 2. This
-    # loop is similar to Matrix Chain Multiplication.
+    # Palindromes of length more than 2.
     # We start with a gap of length 2 and fill DP
     # table in a way that the gap between starting and
     # ending indexes increase one by one by
@@ -146,7 +145,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_count_palindrome_with_palindromic_sub_strings(self):
         assert count_palindrome("ababababa")==16, "is True"
-
+        assert count_palindrome("aba")==1, "is True"
 
 if __name__ == '__main__':
     unittest.main()
